@@ -1,0 +1,200 @@
+    1  init 0
+    2  df -h
+    3  free -h
+    4  yum install git -y
+    5  yum install vim -y
+    6  yum -y update
+    7  reboot
+    8  yum install java-1.8.0-openjdk
+    9  java -version
+   10  git -version
+   11  java -version
+   12  git --version
+   13  cat /etc/redhat-release 
+   14  cd Downloads/
+   15  ls
+   16  cat /etc/redhat-release 
+   17  javac -version
+   18  java -version
+   19  set -o vi
+   20  yum install java-1.8.0-openjdk-devel
+   21  javac -version
+   22  ls
+   23  tar xvf apache-maven-3.6.3-bin.tar.gz 
+   24  cd apache-maven-3.6.3/
+   25  ls
+   26  pwd
+   27  vim ~/.bashrc
+   28  which javac
+   29  ls -l /usr/bin/javac
+   30  ls -l /etc/alternatives/javac
+   31  vim ~/.bashrc
+   32  source ~/.bashrc
+   33  mvn --version
+   34  ls
+   35  cd ..
+   36  ls
+   37  git
+   38  tree
+   39  yum install -y tree
+   40  clear
+   41  ls
+   42  ansible --version
+   43  yum install ansible
+   44  yum install -y epel-release
+   45  yum install ansible
+   46  ansible --version
+   47  ls
+   48  init 0
+   49  yum update
+   50  history
+   51  pwd
+   52  cd AnsibleTraining
+   53  ls
+   54  cd Day2
+   55  ls
+   56  cd Ansible
+   57  ls
+   58  cat hosts
+   59  cd Day2
+   60  ls
+   61  cd Ansible 
+   62  ansible-doc -l
+   63  ansible-doc --l
+   64  ansible -doc -l
+   65  ansible-doc -help
+   66  ansible-doc -l
+   67  ls
+   68  ansible-playbook -i hosts ping.yml
+   69  ls
+   70  cd before-refactoring/
+   71  ls
+   72  ansible-playbook -i hosts install-nginx.yml 
+   73  ansible -i hosts ubuntu1 -m shell -a "service nginx status"
+   74  ansible-playbook -i hosts install-nginx.yml 
+   75  ansible -i hosts ubuntu1 -m shell -a "service nginx status"
+   76  curl http://localhost:8001
+   77  docker exec -it ubuntu1 /bin/bash
+   78  set -o vi
+   79  ssh -p 2001 root@localhost
+   80  ansible -i hosts ubuntu1 -m shell -a "hostname -i"
+   81  scp root@172.17.0.2:/etc/nginx/sites-available/default .
+   82  ls
+   83  ansible-doc folder
+   84  ansible-doc file
+   85  O
+   86  ansible-playbook -i hosts install-nginx.yml ansiblean
+   87  ananclear
+   88  ansible-doc template
+   89  ansible-playbook -i hosts install-nginx.yml
+   90  pwd
+   91  ls
+   92  cd before-refactoring/
+   93  ls
+   94  ansible-playbook -i hosts install-nginx.yml
+   95  ls
+   96  ansible-playbook -i hosts install-nginx.yml
+   97  http://localhost:8001
+   98  curl http://localhost:8001
+   99  pwd
+  100  cd ../..
+  101  ls
+  102  cd devops-sep-2020/
+  103  git pull
+  104  cd ..
+  105  cd Ansible
+  106  ls
+  107  cd before-refactoring/
+  108  ls
+  109  ansible-playbook -i hosts install-nginx.yml
+  110  curl http://localhost:8001
+  111  curl http://localhost:8002
+  112  ansible-playbook -i hosts install-nginx.yml
+  113  curl http://localhost:8002
+  114  ansible-playbook -i hosts install-nginx.yml
+  115  curl http://localhost:8002
+  116  ansible-playbook -i hosts install-nginx.yml
+  117  ssh -p 2001 root@localhost
+  118  cd ..
+  119  ls
+  120  cd ..
+  121  ls
+  122  git clone https://github.com/tektutor/centos-sshd-passwordless.git
+  123  ls
+  124  cd centos-sshd-passwordless
+  125  ls
+  126  cp /root/.sss/id_rsa.pub authorized_keys
+  127  cp /root/.ssh/id_rsa.pub authorized_keys
+  128  docker build -t tektutor/ansible-centos .
+  129  /run
+  130  docker images
+  131  docker run -d --name centos1 --hostname centos1 -p 3000:22 -p 9000:22 tektutor/ansible-centos
+  132  docker ps -a
+  133  ssh -p 3000 root@localhost
+  134  docker run -d --name centos2 --hostname centos2 -p 3001:22 -p 9001:22 tektutor/ansible-centos
+  135  docker ps
+  136  docker rm -f centos1 centos2
+  137  docker run -d --name centos1 --hostname centos1 -p 2003:22 -p 8003:80 tektutor/ansible-centos
+  138  docker run -d --name centos2 --hostname centos2 -p 2004:22 -p 8004:80 tektutor/ansible-centos
+  139  ansible-playbook -i hosts install-nginx.yml
+  140  ansible-playbook -i hosts install-nginx.yml --limit=centos1
+  141  ansible-playbook install-nginx.yml
+  142  which java
+  143  javac -version
+  144  cd /root/Downloads/
+  145  ls
+  146  cd apache-maven-3.6.3/
+  147  ls
+  148  cd bin
+  149  ;s
+  150  ls
+  151  cd /usr/lib
+  152  ls
+  153  cd java-1.8.0/
+  154  ls
+  155  cd ..
+  156  cd java
+  157  ls
+  158  cd ..
+  159  which mvn
+  160  mvn --version
+  161  cd/
+  162  cd /root/AnsibleTraining/
+  163  find . -name pom.xml
+  164  find . -name App.java
+  165  find . -name -i pom.xml
+  166  pwd
+  167  ls
+  168  cd devops-sep-2020/
+  169  ls
+  170  cd ..
+  171  ls
+  172  cd ..
+  173  ls
+  174  git clone https://github.com/tektutor/devops-sep-2020.git
+  175  ls
+  176  cd devops-sep-2020/
+  177  ls
+  178  cd Day4
+  179  ls
+  180  cd ..
+  181  ls
+  182  pwd
+  183  ls
+  184  cp -rp Day4 /root/AnsibleTraining/
+  185  cd /root/AnsibleTraining/
+  186  ls
+  187  cd Day4
+  188  ls
+  189  cd ..
+  190  ls
+  191  cp -rp Day4 devops-sep-2020/
+  192  cp Commands.txt devops-sep-2020/
+  193  cd devops-sep-2020/
+  194  ls
+  195  pwd
+  196  git add --all
+  197  git commit -m "Added Day 4"
+  198  git remote add origin https://github.com/DeepthiPandilla/devops-sep-2020.git
+  199  git push -u origin master
+  200  history >Commands_Dev4.txt
