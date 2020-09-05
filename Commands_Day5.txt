@@ -260,3 +260,523 @@
   260  ./startup.sh 
   261  cd
   262  history > /root/AnsibleTraining/devops-sep-2020/Commands_Day5.txt
+    1  init 0
+    2  df -h
+    3  free -h
+    4  yum install git -y
+    5  yum install vim -y
+    6  yum -y update
+    7  reboot
+    8  yum install java-1.8.0-openjdk
+    9  java -version
+   10  git -version
+   11  java -version
+   12  git --version
+   13  cat /etc/redhat-release 
+   14  cd Downloads/
+   15  ls
+   16  cat /etc/redhat-release 
+   17  javac -version
+   18  java -version
+   19  set -o vi
+   20  yum install java-1.8.0-openjdk-devel
+   21  javac -version
+   22  ls
+   23  tar xvf apache-maven-3.6.3-bin.tar.gz 
+   24  cd apache-maven-3.6.3/
+   25  ls
+   26  pwd
+   27  vim ~/.bashrc
+   28  which javac
+   29  ls -l /usr/bin/javac
+   30  ls -l /etc/alternatives/javac
+   31  vim ~/.bashrc
+   32  source ~/.bashrc
+   33  mvn --version
+   34  ls
+   35  cd ..
+   36  ls
+   37  git
+   38  tree
+   39  yum install -y tree
+   40  clear
+   41  ls
+   42  ansible --version
+   43  yum install ansible
+   44  yum install -y epel-release
+   45  yum install ansible
+   46  ansible --version
+   47  ls
+   48  init 0
+   49  yum update
+   50  history
+   51  pwd
+   52  cd AnsibleTraining
+   53  ls
+   54  cd Day2
+   55  ls
+   56  cd Ansible
+   57  ls
+   58  cat hosts
+   59  cd Day2
+   60  ls
+   61  cd Ansible 
+   62  ansible-doc -l
+   63  ansible-doc --l
+   64  ansible -doc -l
+   65  ansible-doc -help
+   66  ansible-doc -l
+   67  ls
+   68  ansible-playbook -i hosts ping.yml
+   69  ls
+   70  cd before-refactoring/
+   71  ls
+   72  ansible-playbook -i hosts install-nginx.yml 
+   73  ansible -i hosts ubuntu1 -m shell -a "service nginx status"
+   74  ansible-playbook -i hosts install-nginx.yml 
+   75  ansible -i hosts ubuntu1 -m shell -a "service nginx status"
+   76  curl http://localhost:8001
+   77  docker exec -it ubuntu1 /bin/bash
+   78  set -o vi
+   79  ssh -p 2001 root@localhost
+   80  ansible -i hosts ubuntu1 -m shell -a "hostname -i"
+   81  scp root@172.17.0.2:/etc/nginx/sites-available/default .
+   82  ls
+   83  ansible-doc folder
+   84  ansible-doc file
+   85  O
+   86  ansible-playbook -i hosts install-nginx.yml ansiblean
+   87  ananclear
+   88  ansible-doc template
+   89  ansible-playbook -i hosts install-nginx.yml
+   90  pwd
+   91  ls
+   92  cd before-refactoring/
+   93  ls
+   94  ansible-playbook -i hosts install-nginx.yml
+   95  ls
+   96  ansible-playbook -i hosts install-nginx.yml
+   97  http://localhost:8001
+   98  curl http://localhost:8001
+   99  pwd
+  100  cd ../..
+  101  ls
+  102  cd devops-sep-2020/
+  103  git pull
+  104  cd ..
+  105  cd Ansible
+  106  ls
+  107  cd before-refactoring/
+  108  ls
+  109  ansible-playbook -i hosts install-nginx.yml
+  110  curl http://localhost:8001
+  111  curl http://localhost:8002
+  112  ansible-playbook -i hosts install-nginx.yml
+  113  curl http://localhost:8002
+  114  ansible-playbook -i hosts install-nginx.yml
+  115  curl http://localhost:8002
+  116  ansible-playbook -i hosts install-nginx.yml
+  117  ssh -p 2001 root@localhost
+  118  cd ..
+  119  ls
+  120  cd ..
+  121  ls
+  122  git clone https://github.com/tektutor/centos-sshd-passwordless.git
+  123  ls
+  124  cd centos-sshd-passwordless
+  125  ls
+  126  cp /root/.sss/id_rsa.pub authorized_keys
+  127  cp /root/.ssh/id_rsa.pub authorized_keys
+  128  docker build -t tektutor/ansible-centos .
+  129  /run
+  130  docker images
+  131  docker run -d --name centos1 --hostname centos1 -p 3000:22 -p 9000:22 tektutor/ansible-centos
+  132  docker ps -a
+  133  ssh -p 3000 root@localhost
+  134  docker run -d --name centos2 --hostname centos2 -p 3001:22 -p 9001:22 tektutor/ansible-centos
+  135  docker ps
+  136  docker rm -f centos1 centos2
+  137  docker run -d --name centos1 --hostname centos1 -p 2003:22 -p 8003:80 tektutor/ansible-centos
+  138  docker run -d --name centos2 --hostname centos2 -p 2004:22 -p 8004:80 tektutor/ansible-centos
+  139  ansible-playbook -i hosts install-nginx.yml
+  140  ansible-playbook -i hosts install-nginx.yml --limit=centos1
+  141  ansible-playbook install-nginx.yml
+  142  cd /root/AnsibleTraining
+  143  ls
+  144  cd Day3
+  145  ls
+  146  cd loops
+  147  ls
+  148  docker ps
+  149  history
+  150  history >/root/AnsibleTraining/Commands.txt
+  151  ls
+  152  docker ps
+  153  ssh -p 2001 root@localhost
+  154  echo "" > /root/.ssh/known_hosts
+  155  ssh -p 2001 root@localhost
+  156  cat /root/.ssh/id_rsa.pub 
+  157  ls
+  158  cp /root/.ssh/id_rsa.pub authorized_keys
+  159  ls
+  160  docker cp authorized_keys ubuntu-001:/root/.ssh/authorized_keys
+  161  docker cp authorized_keys ubuntu-021:/root/.ssh/authorized_keys
+  162  docker cp authorized_keys ubuntu-002:/root/.ssh/authorized_keys
+  163  docker cp authorized_keys centos-001:/root/.ssh/authorized_keys
+  164  docker cp authorized_keys centos-002:/root/.ssh/authorized_keys
+  165  ssh -p 2001 root@localhost
+  166  ssh -p 2002 root@localhost
+  167  ssh -p 3001 root@localhost
+  168  ssh -p 3002 root@localhost
+  169  docker ps
+  170  ssh -p 3002 root@localhost
+  171  ssh -p 3001 root@localhost
+  172  ssh -p 2002 root@localhost
+  173  ssh -p 3001 root@localhost
+  174  pwd
+  175  ls
+  176  history
+  177  cat /root/.ssh/id_rsa.pub
+  178  cp /root/.ssh/id_rsa.pub authorized_keys
+  179  docker cp ubuntu-001:/root/.ssh/authorized_keys authorized_ubuntu1
+  180  ls
+  181  docker cp centos-001:/root/.ssh/authorized_keys authorized_centos1
+  182  docker cp centos-002:/root/.ssh/authorized_keys authorized_centos2
+  183  ls
+  184  diff authorized_ubuntu1 authorized_centos1
+  185  diff authorized_ubuntu1 authorized_centos2
+  186  diff authorized_keys authorized_centos2
+  187  cat /root/.ssh/id_rsa
+  188  pwd
+  189  cd ..
+  190  ls
+  191  pwd
+  192  cd custom-ansible-module/
+  193  ls
+  194  cd tomcat/
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd ..
+  199  ls
+  200  cd /root/AnsibleTraining/
+  201  find . -name install-tomcat-ansible.yml
+  202  find . -name install-tomcat-playbook.yml
+  203  vi ./devops-sep-2020/Day3/custom-ansible-role/install-tomcat-playbook.yml
+  204  cd Day3
+  205  ls
+  206  cd custom-ansible-module/
+  207  cp ./devops-sep-2020/Day3/custom-ansible-role/install-tomcat-playbook.yml .
+  208  cp /root/AnsibleTraining/devops-sep-2020/Day3/custom-ansible-role/install-tomcat-playbook.yml .
+  209  pwd
+  210  ssh -p 2002 root@localhosst
+  211  ssh -p 2002 root@localhost
+  212  ssh -p 3001 root@localhost
+  213  history
+  214  ls
+  215  cd ..
+  216  ls
+  217  cd ..
+  218  ls
+  219  cd Day2
+  220  ls
+  221  cd ubuntu-ansible/
+  222  ls
+  223  cat authorized_keys 
+  224  cat /root/..sh/id_rsa.pub
+  225  cat /root/.ssh/id_rsa.pub
+  226  diff authorized_keys /root/.ssh/id_rsa.pub
+  227  cd ..
+  228  ls
+  229  pwd
+  230  cd centos-sshd-passwordless/
+  231  ls
+  232  diff authorized_keys /root/.ssh/id_rsa.pub
+  233  git --version
+  234  cd
+  235  pwd
+  236  mkdir /GitDemo
+  237  cd GitDem
+  238  cd GitDemo
+  239  mkdir GitDemo
+  240  cd GitDemo/
+  241  git --version
+  242  git config --global user.name "Deepthi Pandilla"
+  243  git config --global user.email "deepthi.p2004@gmail.com"
+  244  git config --list
+  245  vim fruits.txt
+  246  git status
+  247  git init
+  248  tree .git
+  249  git status
+  250  git add fruits.txt
+  251  git status
+  252  git commit m "Initial commit"
+  253  git status
+  254  git log
+  255  git commit -help
+  256  git commit -m "Initial commit"
+  257  git status
+  258  git log
+  259  pwd
+  260  cd ..
+  261  ls
+  262  cd AnsibleTraining/
+  263  ls
+  264  cd Day3
+  265  ls
+  266  cd custom-ansible-module/
+  267  ls
+  268  cd ..
+  269  ls
+  270  cd ..
+  271  ls
+  272  cd ..
+  273  ls
+  274  cd AnsibleTraining/
+  275  ls
+  276  cd Day2
+  277  ls
+  278  cd centos-sshd-passwordless/
+  279  ls
+  280  docker run -d --name centos3 --hostname centos3 -p 3003:22 -p 9003:22 tektutor/ansible-centos
+  281  docker images
+  282  docker ps
+  283  cd ..
+  284  ls
+  285  cd ubuntu-ansible/
+  286  ls
+  287  docker run -d --name ubuntu3 --hostname ubuntu3 -p 2003:22 -p 8003:80 tektutor/ubuntu-ansible
+  288  docker run -d --name ubuntu3 --hostname ubuntu3 -p 2003:22 -p 8003:80 tektutor/ansible-ubuntu
+  289  docker ps
+  290  cd ..
+  291  ls
+  292  cd centos-sshd-passwordless/
+  293  ls
+  294  docker run -d --name centos3 --hostname centos3 -p 3003:22 -p 9003:80 tektutor/ansible-centos
+  295  docker rm -f centos3
+  296  docker run -d --name centos3 --hostname centos3 -p 3003:22 -p 9003:80 tektutor/ansible-centos
+  297  docker ps
+  298  ssh -p 3003 root@localhost
+  299  ls
+  300  docker ps -a
+  301  docker inspect centos3
+  302  scp authorized_keys root@171.17.0.6:/root/.ssh/authorized_keys
+  303  history
+  304  docker ps
+  305  docker cp authorized_keys centos3:/root/.ssh/authorized_keys
+  306  ssh -p 3003 root@localhost
+  307  docker cp authorized_keys ubuntu3:/root/.ssh/authorized_keys
+  308  ssh -p 2003 root@localhost
+  309  cd /root/AnsibleTraining/
+  310  ls
+  311  cd ..
+  312  ls
+  313  cd GitDemo/
+  314  ls
+  315  vi fruits.txt 
+  316  git branch
+  317  git checkout -b dev-1.0
+  318  git branch
+  319  ls
+  320  vi fruits.txt 
+  321  git add --all
+  322  git statuys
+  323  git status
+  324  git commit m "Added Mango in dev-1.0"
+  325  git commit -m "Added Mango in dev-1.0"
+  326  git log
+  327  git checkout
+  328  git branch
+  329  git checkout master
+  330  git log
+  331  git commit -m "Added Grapes in Master"
+  332  git log
+  333  cat fruits.txt 
+  334  vi fruits.txt 
+  335  git commit -m "Added Grapes in Master"
+  336  git log
+  337  git add --all
+  338  git commit -m "Added Grapes in Master"
+  339  git log
+  340  cat fruits.txt 
+  341  git branch
+  342  git merge dev-1.0 
+  343  git checkout dev-1.0 
+  344  ls
+  345  vi fruits.txt
+  346  git checkout dev-1.0 
+  347  git merge dev-1.0 
+  348  git add --all
+  349  git commit -m "Modified file in master"
+  350  git log
+  351  git merge dev-1.0 
+  352  git checkout dev-1.0 
+  353  vi fruits.txt 
+  354  git add --all
+  355  git commit -m "Added Orange in dev-1.0"
+  356  git log
+  357  git checkout
+  358  git branch
+  359  git checkout master
+  360  git log
+  361  cat fruits.txt 
+  362  git merge dev-1.0 
+  363  cat fruits.txt 
+  364  vi fruits.txt 
+  365  git merge dev-1.0 
+  366  git add --all
+  367  git commit "Resolved merge conflicts"
+  368  git commit -m "Resolved merge conflicts"
+  369  git log
+  370  cat fruits.txt 
+  371  git remote add origin https://github.com/DeepthiPandilla/git-demo.git
+  372  git push -u origin master
+  373  pwd
+  374  cd ../AnsibleTraining/
+  375  ls
+  376  cd devops-sep-2020/
+  377  ls
+  378  rm -rf .git
+  379  git init
+  380  git add --all
+  381  git commit -m "First commit"
+  382  git remote add origin https://github.com/DeepthiPandilla/devops-sep-2020.git
+  383  git push -u origin master
+  384  cd /root/Downloads/
+  385  ls
+  386  java -jar ./jenkins.war 
+  387  history
+  388  history > /root/AnsibleTraining/devops-sep-2020/Commands_TillDay4.txt
+  389  cd /root/AnsibleTraining/devops-sep-2020/
+  390  ls
+  391  git add --all
+  392  git commit -m "Added commands"
+  393  git push -u origin master
+  394  ls
+  395  pwd
+  396  cd DAy4
+  397  l
+  398  ls
+  399  cd Day4
+  400  ls
+  401  cd build-docker-image/
+  402  ls
+  403  rm 2~
+  404  rm authorized_keys 
+  405  cp /root/.ssh/id_rsa.pub authorized_keys
+  406  ls
+  407  diff authorized_keys /root/.ssh/id_rsa.pub 
+  408  pwd
+  409  ls
+  410  cd ..
+  411  ls
+  412  pwd
+  413  cd /
+  414  ls
+  415  cd root
+  416  ls
+  417  cd devops-sep-2020/
+  418  ls
+  419  git pull
+  420  ls
+  421  cd Day
+  422  cd Day4
+  423  ls
+  424  cd build-docker-image/
+  425  ls
+  426  pwd
+  427  cd /root/AnsibleTraining/devops-sep-2020/
+  428  ls
+  429  cd Day4
+  430  ls
+  431  cd build-docker-image/
+  432  ls
+  433  cd ..
+  434  cp -rp /root/devops-sep-2020/Day4 .
+  435  ls
+  436  cd Day4
+  437  ls
+  438  cd build-docker-image/
+  439  ls
+  440  cd ..
+  441  pwd
+  442  ls
+  443  rm -rf build-docker-image/
+  444  cp -rp /root/devops-sep-2020/Day4/build-docker-image/ .
+  445  ls
+  446  cd ..
+  447  ls
+  448  git add --all
+  449  git commit -m "Added Day4 build image with Java and Maven"
+  450  ls
+  451  git push -u origin master
+  452  docker ps
+  453  ls
+  454  pwd
+  455  cd ../..
+  456  ls
+  457  cd devops-sep-2020/
+  458  ls
+  459  git pull
+  460  ls
+  461  pwd
+  462  cd ../AnsibleTraining/
+  463  ls
+  464  cd devops-sep-2020/
+  465  ls
+  466  cp -rp /root/devops-sep-2020/Day5 .
+  467  ls -rtl
+  468  cd Day5
+  469  ls
+  470  cd windows-ansible-node/
+  471  ls
+  472  vi hosts
+  473  ansible all -m win_ping
+  474  pip install "pywinrm>=0.3.0"
+  475  d
+  476  cd
+  477  ip install "pywinrm>=0.3.0"
+  478  pip install "pywinrm>=0.3.0"
+  479  pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org "pywinrm>=0.3.0"
+  480  vi /etc/resolv.conf
+  481  pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org "pywinrm>=0.3.0"
+  482  pip install "pywinrm>=0.3.0"
+  483  history
+  484  ansible all -m win_ping
+  485  pwd
+  486  cd AnsibleTraining/
+  487  cd devops-sep-2020/
+  488  ls
+  489  cd Dy5
+  490  ls
+  491  cd Day5
+  492  ls
+  493  cd windows-ansible-node/
+  494  ls
+  495  vi hosts
+  496  ansible all -m win_ping
+  497  vi hosts
+  498  ansible all -m win_ping
+  499  vi hosts
+  500  ansible all -m win_ping
+  501  vi hosts
+  502  ansible all -m win_ping
+  503  vi hosts
+  504  ls
+  505  ansible-playbook -i hosts install-notepad.yml 
+  506  ls
+  507  cat install-notepad.yml
+  508  d
+  509  cd
+  510  docker run -e "ADMIN_PASSWORD=admin" -e "ACCEPT_EULA=Y" -p 4516:4516 --name xld xebialabs/xl-deploy:9.7
+  511  cd /root/Downloads/
+  512  ls
+  513  unzip xl-release-9.6.1-server.zip
+  514  ls
+  515  cd xl-release-9.6.1-server/
+  516  ls
+  517  cd bin
+  518  ls
+  519  ./run.sh
+  520  history >> /root/AnsibleTraining/devops-sep-2020/Commands_Day5.txt 
