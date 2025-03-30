@@ -1,0 +1,191 @@
+Day1:
+
+ssh-keygen
+
+cat ~/.ssh/id_rsa.pub
+
+Copy this key and paste under github => settings=> sshkeys
+
+Then copy ssh url for myapp repo and run 
+
+git clone <ssh url>
+
+
+152  cd myapp/
+  156  vi app.py   => inside this file write print(“Hello World”)
+  157  git status
+  158  git add app.py
+  159  git status
+  161  git config --local user.name "Rajendra"
+  162  git config --local user.email "rajendra@gmail.com"
+
+  163  git commit -m "Intial commit"
+  164  git log
+  165  git branch
+  166  git push
+
+Git branching
+
+165  git branch
+  166  git push
+  167  history
+  168  vi app.py
+  169  git log
+  170  vi app.py
+  171  git status
+  172  git add app.py
+  173  git status
+  174  git commit -m "seocnd commit"
+  175  git log
+  176  git push
+  177  git log
+  178  git branch
+  179  git branch dev1
+  180  git branch
+  181  git checkout dev1
+  182  git branch
+  183  git log
+  184  vi app.py
+
+  185  git status
+  186  git add app.py
+  187  git commit -m "changes from dev1"
+  188  git log
+  189  git checkout main
+  190  git log
+  191  git merge dev1
+  192  git log
+  193  git push
+  194  git log
+
+  197  git branch
+  198  ls
+  199  git checkout dev1
+  200  ls
+  201  touch abc.py
+  202  git status
+  203  git add abc.py
+  204  git commit -m "abc.py added"
+  205  ls
+  206  git checkout main
+  207  ls
+  208  git merge dev1
+  209  ls
+  210  git branch
+  211  git checkout dev1
+  212  git push
+  213  git push --set-upstream origin dev1
+
+
+Git merge conflict 
+DEV! Branch
+
+215  git branch
+  216  git log
+  217  vi app.py
+  218  git add app.py
+  220  git commit -m "conflict test"
+  222  git branch
+  223  git checkout main
+  224  vi app.py
+  225  git add app.py
+  226  git commit -m "change from dev2"
+  227  vi app.py
+  228  git merge dev1
+  229  vi app.py  => open file and keep the code that u want and save file
+
+  230  git status
+  231  git add app.py
+  232  git commit -m "Resolved conflict"
+
+
+Day2:
+
+156  git init myapp
+  157  cd myapp/
+  158  git config --global user.name "Rajendra"
+  159  git config --global user.email "Rajendra@gmail.com"
+  160  ls
+  161  touch f1
+  162  git add f1
+  163  git commit -m "f1 added"
+  164  touch f2
+  165  git add f2
+  166  git commit -m "f2 added"
+  167  git log
+  168  git checkout -B dev1
+  169  git log
+  170  touch m1
+
+171  git add m1
+  172  git commit -m "m1 added"
+  173  git log
+  174  git checkout master
+  175  touch f3
+  176  git log
+  177  git add f3
+  178  git commit -m "f3 added"
+  179  git log
+  180  git checkout dev1
+  181  git log
+  182  git branch
+  183  git rebase master
+  184  git log
+
+Git reset
+
+  191  vi f1 
+  192  git status
+  193  git add f1
+  194  git status
+  195  git reset --mixed
+  196  git status
+  197  vi f1 
+  198  git add f1
+  199  git status
+  200  git reset --hard
+  201  git status
+git branch -D dev1
+
+
+Git revert
+
+  205  git log
+  206  git revert e3c2ac3f9f96a293e4711de6e2a1b097aa5c0b1a
+  207  ls
+  208  git log
+
+Git stash
+
+  210  git log
+  211  git status
+  212  vi f1 
+  213  git status
+  214  git checkout -B dev2
+  215  git status
+  216  git stash
+  217  git status
+  218  git stash pop
+  219  vi f1 
+
+Git Ignore
+
+  221  git status
+  222  ls
+  223  touch app.py
+  224  touch app.pyc
+  225  touch app.swp
+  226  git status
+  227  vi .gitignore
+  228  git status
+  229  git add .gitignore 
+  230  gti commit -m "gitignore file added"
+  231  git commit -m "gitignore file added"
+  232  ls
+  233  git status
+  234  git add f1 app.py
+  235  git commit -m "test"
+  236  git log
+  237  ls
+  238  git status
+
